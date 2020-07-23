@@ -3029,7 +3029,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.timeline-circle__item.active,
+.timeline-circle__item.pink,
 .timeline-circle__item:hover {
   color: #ffbfe8;
 }
@@ -3312,6 +3312,29 @@ h3 {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
+}
+
+@media (max-width: 1900px) {
+  .time-line__static {
+    padding-left: 53%;
+  }
+
+  .timeline-circle {
+    height: 667px;
+    width: 767px;
+    top: 175px;
+  }
+
+  .timeline__title {
+    font-size: 200px;
+    line-height: 1.05;
+  }
+
+  .timeline__title:after {
+    width: 167px;
+    left: -200px;
+    bottom: 30px;
+  }
 }
 
 @media (prefers-reduced-motion), (print) {

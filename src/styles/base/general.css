@@ -84,6 +84,9 @@ h1,h2,h3{
 
 .time-line__static{
   padding-left: 48%;
+  @media (--el){
+    padding-left: 53%;
+  }
 }
 .timeline-circle{
   position: absolute;
@@ -95,6 +98,11 @@ h1,h2,h3{
   border-radius: 50%;
   border: 1px solid #fff;
   transform: rotate(0deg);
+  @media (--el){
+    height: 667px;
+    width: 767px;
+    top: 175px;
+  }
 }
 
 .timeline-circle__list{
@@ -117,7 +125,7 @@ h1,h2,h3{
   color: var(--text-color);
   transform-origin: 0 50%;
   text-transform: uppercase;
-  &.active, &:hover{
+  &.pink, &:hover{
     color: #ffbfe8;
   }
 }
@@ -185,6 +193,16 @@ h1,h2,h3{
     left: -250px;
     z-index: 99;
   }
+  @media (--el){
+    font-size: 200px;
+    line-height: 1.05;
+    &:after{
+      width: 167px;
+      left: -200px;
+      bottom: 30px;
+    }
+  }
+
 }
 
 .timeline__decr{

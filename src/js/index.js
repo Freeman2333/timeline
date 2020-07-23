@@ -20,6 +20,7 @@ let timelineCircleItems = document.querySelectorAll(".timeline-circle__item");
 let timelineCircleItemActive = document.querySelector(".timeline-circle__item.active");
 let timelineCircleItemActiveCount = timelineCircleItemActive.getAttribute('data-item');
 let timelineCircle = document.querySelector(".timeline-circle");
+let timelineTitle = document.querySelector(".timeline__title");
 
 timelineCircleItems.forEach(function(item) {
 	item.addEventListener('click',function() {
@@ -27,8 +28,12 @@ timelineCircleItems.forEach(function(item) {
 		let itemNumber = this.getAttribute('data-item')
 		let activeItem = document.querySelector(".timeline-circle__item.active");
 		let activeItemNumber = activeItem.getAttribute('data-item')
+		let pinkItem =document.querySelector(".timeline-circle__item.pink")
+		pinkItem.classList.remove('pink')
+		this.classList.add('pink')
 		let degreesRotate = (activeItemNumber - itemNumber)*9
-		console.log(degreesRotate)
+		console.log(activeItemNumber, itemNumber, degreesRotate)
 		timelineCircle.style.transform =  "rotate(" + degreesRotate + "deg)"
+		timelineTitle.textContent = this.textContent
 	})
 })

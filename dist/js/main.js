@@ -158,15 +158,20 @@ var timelineCircleItems = document.querySelectorAll(".timeline-circle__item");
 var timelineCircleItemActive = document.querySelector(".timeline-circle__item.active");
 var timelineCircleItemActiveCount = timelineCircleItemActive.getAttribute('data-item');
 var timelineCircle = document.querySelector(".timeline-circle");
+var timelineTitle = document.querySelector(".timeline__title");
 timelineCircleItems.forEach(function (item) {
   item.addEventListener('click', function () {
     var rotationDegree = timelineCircle.style.transform.slice(7, -4);
     var itemNumber = this.getAttribute('data-item');
     var activeItem = document.querySelector(".timeline-circle__item.active");
     var activeItemNumber = activeItem.getAttribute('data-item');
+    var pinkItem = document.querySelector(".timeline-circle__item.pink");
+    pinkItem.classList.remove('pink');
+    this.classList.add('pink');
     var degreesRotate = (activeItemNumber - itemNumber) * 9;
-    console.log(degreesRotate);
+    console.log(activeItemNumber, itemNumber, degreesRotate);
     timelineCircle.style.transform = "rotate(" + degreesRotate + "deg)";
+    timelineTitle.textContent = this.textContent;
   });
 });
 
