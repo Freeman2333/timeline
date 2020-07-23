@@ -1,0 +1,22 @@
+:root {
+  /*Colors*/
+  --text-color: #d5d5d5;
+  --pink: #de2bba;
+  --color-primary--hover: #ccc;
+  --color-primary--active: #ccc;
+
+  /*Animate*/
+  --cubic-1: cubic-bezier(0.54, -0.81, 0.57, 0.57);
+
+}
+
+/*Custom selectors*/
+@custom-selector :--hover :hover, :active;
+
+  /*Custom breakpoints*/
+@custom-media --s (width >= 576px);
+@custom-media --m (width >= 768px);
+@custom-media --l (width >= 992px);
+@custom-media --el (width >= 1200px);
+
+
