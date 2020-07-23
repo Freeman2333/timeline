@@ -54,7 +54,10 @@ h1,h2,h3{
 .article__container{
   width: 97%;
   max-width: 440px;
-  margin: 0 auto;
+  @media (--el){
+    max-width: 440px;
+    margin-left: 43%;
+  }
 }
 
 .article__title{
@@ -85,7 +88,7 @@ h1,h2,h3{
 .time-line__static{
   padding-left: 48%;
   @media (--el){
-    padding-left: 53%;
+    padding-left: 43%;
   }
 }
 .timeline-circle{
@@ -100,8 +103,9 @@ h1,h2,h3{
   transform: rotate(0deg);
   @media (--el){
     height: 667px;
-    width: 767px;
-    top: 175px;
+    /*left: -550px;*/
+    width: 667px;
+    top: 179px;
   }
 }
 

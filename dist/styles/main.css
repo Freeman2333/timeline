@@ -2960,7 +2960,6 @@ h3 {
 .article__container {
   width: 97%;
   max-width: 440px;
-  margin: 0 auto;
 }
 
 .article__title {
@@ -3315,14 +3314,20 @@ h3 {
 }
 
 @media (max-width: 1900px) {
+  .article__container {
+    max-width: 440px;
+    margin-left: 43%;
+  }
+
   .time-line__static {
-    padding-left: 53%;
+    padding-left: 43%;
   }
 
   .timeline-circle {
     height: 667px;
-    width: 767px;
-    top: 175px;
+    /*left: -550px;*/
+    width: 667px;
+    top: 179px;
   }
 
   .timeline__title {
