@@ -15,8 +15,8 @@
 
   /*Custom breakpoints*/
 @custom-media --s (width >= 576px);
-@custom-media --m (width >= 768px);
-@custom-media --l (width >= 992px);
+@custom-media --m (width <= 768px);
+@custom-media --l (width <= 1300px);
 @custom-media --el (width <= 1900px);
 
 

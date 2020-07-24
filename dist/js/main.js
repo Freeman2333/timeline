@@ -161,7 +161,13 @@ var timelineCircle = document.querySelector(".timeline-circle");
 var timelineTitle = document.querySelector(".timeline__title");
 timelineCircleItems.forEach(function (item) {
   item.addEventListener('click', function () {
-    var rotationDegree = timelineCircle.style.transform.slice(7, -4);
+    // let rotationDegree = timelineCircle.style.transform.slice(7,-4)
+    var timelineTitle = document.querySelector(".timeline__title");
+    console.log(timelineTitle);
+    timelineTitle.classList.add("animated");
+    setTimeout(function () {
+      return timelineTitle.classList.remove('animated');
+    }, 1000);
     var itemNumber = this.getAttribute('data-item');
     var activeItem = document.querySelector(".timeline-circle__item.active");
     var activeItemNumber = activeItem.getAttribute('data-item');
@@ -169,7 +175,6 @@ timelineCircleItems.forEach(function (item) {
     pinkItem.classList.remove('pink');
     this.classList.add('pink');
     var degreesRotate = (activeItemNumber - itemNumber) * 9;
-    console.log(activeItemNumber, itemNumber, degreesRotate);
     timelineCircle.style.transform = "rotate(" + degreesRotate + "deg)";
     timelineTitle.textContent = this.textContent;
   });
